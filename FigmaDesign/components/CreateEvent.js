@@ -6,9 +6,11 @@ import {
   ImageBackground,
   TextInput,
   Button,
+  TouchableOpacity,
 } from 'react-native';
 import * as React from 'react';
 import colors from '../assets/colors/colors';
+import DatePicker from 'react-native-neat-date-picker';
 
 export default CreateEvent = ({route, navigation}) => {
   return (
@@ -43,11 +45,13 @@ export default CreateEvent = ({route, navigation}) => {
         </View>
 
         {/* {Button Next} */}
+
         <View style={styles.buttonInput}>
           <Button
             title="Next"
             color="#06D6A0"
             accessibilityLabel="Create Event"
+            onPress={() => navigation.navigate('Event')}
           />
         </View>
       </ImageBackground>
@@ -58,7 +62,7 @@ export default CreateEvent = ({route, navigation}) => {
 // After clicking the ‘create my next event’ button,
 // the user should be directed to a new page where they can input their
 // event name, host name, start and end time/date, location and event photo.
-// Ensure there is a “next” button on the page. For this page, there is no Figma template to go off,
+// Ensure there is a “next” button on the page.
 
 const styles = StyleSheet.create({
   backgroundImage: {

@@ -99,7 +99,7 @@ const styles = StyleSheet.create({
   buttonImage: {
     width: 221,
     height: 49,
-    marginHorizontal: 90,
+    marginHorizontal: 85,
     marginTop: 31,
   },
 
