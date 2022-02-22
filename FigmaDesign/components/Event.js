@@ -1,17 +1,8 @@
-import {
-  Text,
-  StyleSheet,
-  View,
-  Image,
-  ImageBackground,
-  TextInput,
-  Button,
-} from 'react-native';
+import {Text, StyleSheet, View, Image} from 'react-native';
 import * as React from 'react';
 import colors from '../assets/colors/colors';
-import DatePicker from 'react-native-neat-date-picker';
 
-export default CreateEvent = ({route, navigation}) => {
+export default CreateEvent = () => {
   return (
     <View>
       {/* {CoverPhoto} */}
@@ -34,14 +25,16 @@ export default CreateEvent = ({route, navigation}) => {
       <View style={styles.hostNameWrapper}>
         <Text style={styles.hostNameText}>Hosted by Anica</Text>
       </View>
+
+      {/* {User Response} */}
+      <View style={styles.ResponseContainer}>
+        <View style={styles.circleLeft}>{/* Add icon Tick */}</View>
+        <View style={styles.circleMiddle}>{/* Add icon question mark */}</View>
+        <View style={styles.circleRight}>{/* Add icon cross */}</View>
+      </View>
     </View>
   );
 };
-
-// After clicking the ‘create my next event’ button,
-// the user should be directed to a new page where they can input their
-// event name, host name, start and end time/date, location and event photo.
-// Ensure there is a “next” button on the page.
 
 const styles = StyleSheet.create({
   coverPhotoWrapper: {},
@@ -58,7 +51,7 @@ const styles = StyleSheet.create({
     color: '#501FC1',
     width: '50%',
     marginLeft: 69,
-    paddingTop: 10,
+    paddingTop: 9,
   },
 
   hostNameWrapper: {},
@@ -71,5 +64,48 @@ const styles = StyleSheet.create({
     width: '50%',
     marginLeft: 69,
     paddingTop: 3,
+  },
+
+  ResponseContainer: {
+    flexDirection: 'row',
+  },
+  circleLeft: {
+    backgroundColor: colors.white,
+    shadowColor: colors.black,
+    borderRadius: 20,
+    borderColor: colors.black,
+    shadowOffset: {
+      width: 0,
+      height: 4,
+    },
+    shadowOpacity: 0.05,
+    shadowRadius: 10,
+    elevation: 2,
+  },
+  circleMiddle: {
+    backgroundColor: colors.white,
+    shadowColor: colors.black,
+    borderRadius: 20,
+    borderColor: colors.black,
+    shadowOffset: {
+      width: 0,
+      height: 4,
+    },
+    shadowOpacity: 0.05,
+    shadowRadius: 10,
+    elevation: 2,
+  },
+  circleRight: {
+    backgroundColor: colors.white,
+    shadowColor: colors.black,
+    borderRadius: 20,
+    borderColor: colors.black,
+    shadowOffset: {
+      width: 0,
+      height: 4,
+    },
+    shadowOpacity: 0.05,
+    shadowRadius: 10,
+    elevation: 2,
   },
 });

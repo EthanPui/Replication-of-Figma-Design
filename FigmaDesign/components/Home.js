@@ -15,7 +15,7 @@ export default Home = ({navigation}) => {
       <ImageBackground
         source={require('../assets/images/background.png')}
         style={styles.backgroundImage}>
-
+        
         {/* {Image Navbar} */}
         <Image
           source={require('../assets/images/Navbar.png')}
