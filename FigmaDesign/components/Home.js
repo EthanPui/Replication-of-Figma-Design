@@ -1,8 +1,17 @@
-import {Text, StyleSheet, View, Image, ImageBackground} from 'react-native';
+import {
+  Text,
+  StyleSheet,
+  View,
+  Image,
+  ImageBackground,
+  TouchableOpacity,
+} from 'react-native';
 import * as React from 'react';
 import colors from '../assets/colors/colors';
+import CreateEvent from './CreateEvent';
 
-export default Home = () => {
+export default Home = ({navigation}) => {
+  //   const createEventData = ({item}) => {
   return (
     <View>
       <ImageBackground
@@ -23,15 +32,16 @@ export default Home = () => {
           media.
         </Text>
 
-        <Image
-          source={require('../assets/images/button.png')}
-          style={styles.buttonImage}
-        />
+        <TouchableOpacity onPress={() => navigation.navigate('CreateEvent')}>
+          <Image
+            source={require('../assets/images/button.png')}
+            style={styles.buttonImage}
+          />
+        </TouchableOpacity>
 
         <ImageBackground
           source={require('../assets/images/icons-background.png')}
           style={styles.backgroundIcons}>
-
           {/* {3 Images} */}
           <View style={styles.container}>
             <Image
@@ -51,6 +61,7 @@ export default Home = () => {
       </ImageBackground>
     </View>
   );
+  //   };
 };
 
 const styles = StyleSheet.create({
