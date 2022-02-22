@@ -11,12 +11,12 @@ import colors from '../assets/colors/colors';
 import CreateEvent from './CreateEvent';
 
 export default Home = ({navigation}) => {
-  //   const createEventData = ({item}) => {
   return (
     <View>
       <ImageBackground
         source={require('../assets/images/background.png')}
         style={styles.backgroundImage}>
+
         {/* {Image Navbar} */}
         <Image
           source={require('../assets/images/Navbar.png')}
@@ -32,6 +32,7 @@ export default Home = ({navigation}) => {
           media.
         </Text>
 
+        {/* {Button to CreateEvent Page} */}
         <TouchableOpacity onPress={() => navigation.navigate('CreateEvent')}>
           <Image
             source={require('../assets/images/button.png')}
@@ -39,6 +40,7 @@ export default Home = ({navigation}) => {
           />
         </TouchableOpacity>
 
+        {/* {Icon Background} */}
         <ImageBackground
           source={require('../assets/images/icons-background.png')}
           style={styles.backgroundIcons}>
