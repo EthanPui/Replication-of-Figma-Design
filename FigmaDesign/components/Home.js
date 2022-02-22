@@ -1,14 +1,5 @@
-import {
-  Text,
-  StyleSheet,
-  View,
-  Image,
-  TouchableOpacity,
-  ImageBackground,
-} from 'react-native';
+import {Text, StyleSheet, View, Image, ImageBackground} from 'react-native';
 import * as React from 'react';
-import {color} from 'react-native-reanimated';
-import {Colors} from 'react-native/Libraries/NewAppScreen';
 import colors from '../assets/colors/colors';
 
 export default Home = () => {
@@ -40,6 +31,7 @@ export default Home = () => {
         <ImageBackground
           source={require('../assets/images/icons-background.png')}
           style={styles.backgroundIcons}>
+
           {/* {3 Images} */}
           <View style={styles.container}>
             <Image
@@ -95,16 +87,13 @@ const styles = StyleSheet.create({
   buttonImage: {
     width: 221,
     height: 49,
-    marginHorizontal: 70,
+    marginHorizontal: 90,
     marginTop: 31,
   },
 
   backgroundIcons: {
-    // left: 10,
-    // width: 370,
     height: 390,
     marginTop: 16,
-    // marginLeft: 7,
   },
 
   container: {
@@ -112,19 +101,20 @@ const styles = StyleSheet.create({
     justifyContent: 'space-evenly',
     alignItems: 'center',
     paddingTop: 34,
+    marginHorizontal: 90,
   },
 
   ImageLeft: {
-    height: 200,
-    width: 200,
+    height: 271,
+    width: 130,
   },
 
   ImageMiddle: {
-    height: 250,
-    width: 250,
+    height: 342,
+    width: 236,
   },
   ImageRight: {
-    height: 200,
-    width: 200,
+    height: 271,
+    width: 130,
   },
 });
