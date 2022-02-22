@@ -8,7 +8,6 @@ import {
 } from 'react-native';
 import * as React from 'react';
 import colors from '../assets/colors/colors';
-import CreateEvent from './CreateEvent';
 
 export default Home = ({navigation}) => {
   return (
